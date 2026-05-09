@@ -1,32 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAFAF7;
-  --foreground: #0F1F1B;
+  --navy: #0A1628;
+  --navy-mid: #1B2A4A;
+  --blue: #1D4ED8;
+  --blue-bright: #2563EB;
+  --blue-light: #3B82F6;
+  --sky: #38BDF8;
+  --ice: #F0F7FF;
+  --white: #FFFFFF;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--white);
+  --color-foreground: var(--navy);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #F8FAFF;
+  color: var(--navy);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, #0B2117 0%, #1A4A35 60%, #0B2117 100%);
+  background: linear-gradient(135deg, #060E1F 0%, #0A1628 40%, #0F2347 70%, #0A1628 100%);
 }
 
-.campaign-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.blue-gradient {
+  background: linear-gradient(135deg, #1D4ED8, #2563EB, #3B82F6);
 }
 
-.campaign-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.15);
+}
+
+.stat-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
 }
